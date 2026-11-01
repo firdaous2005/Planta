@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/light_bg">
+
+    <FrameLayout
+        android:id="@+id/frame_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <!-- Custom bottom nav: icon above text, same sizing/position every tab -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:orientation="horizontal"
+        android:background="@color/nav_bg"
+        android:elevation="8dp">
+
+        <!-- Classify -->
+        <LinearLayout
+            android:id="@+id/navClassify"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackground">
+
+            <ImageView
+                android:id="@+id/iconClassify"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_leaf"
+                app:tint="@color/light_green_accent"/>
+
+            <TextView
+                android:id="@+id/labelClassify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Classify"
+                android:textColor="@color/light_green_accent"
+                android:textSize="12sp"
+                android:textStyle="bold"/>
+
+            <View
+                android:layout_width="20dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="3dp"
+                android:background="@color/light_green_accent"
+                android:id="@+id/indicatorClassify"/>
+        </LinearLayout>
+
+        <!-- Diagnose -->
+        <LinearLayout
+            android:id="@+id/navDiagnose"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackground">
+
+            <ImageView
+                android:id="@+id/iconDiagnose"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_stethoscope"
+                app:tint="@color/nav_icon_inactive"/>
+
+            <TextView
+                android:id="@+id/labelDiagnose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Diagnose"
+                android:textColor="@color/nav_icon_inactive"
+                android:textSize="12sp"/>
+
+            <View
+                android:layout_width="20dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="3dp"
+                android:background="@android:color/transparent"
+                android:id="@+id/indicatorDiagnose"/>
+        </LinearLayout>
+
+        <!-- My Plants -->
+        <LinearLayout
+            android:id="@+id/navMyPlants"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackground">
+
+            <ImageView
+                android:id="@+id/iconMyPlants"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_pot"
+                app:tint="@color/nav_icon_inactive"/>
+
+            <TextView
+                android:id="@+id/labelMyPlants"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="My Plants"
+                android:textColor="@color/nav_icon_inactive"
+                android:textSize="12sp"/>
+
+            <View
+                android:layout_width="20dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="3dp"
+                android:background="@android:color/transparent"
+                android:id="@+id/indicatorMyPlants"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
